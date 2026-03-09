@@ -1,0 +1,43 @@
+---
+const skills = {
+  Backend: [
+    "Java",
+    "PHP",
+    "Node.js",
+    "Express",
+    "REST API",
+    "MySQL",
+  ],
+
+  Frontend: [
+    "JavaScript",
+    "HTML5",
+    "CSS3",
+    "Astro",
+    "Bootstrap"
+  ],
+
+  Cloud: [
+    "AWS",
+    "EC2",
+    "S3"
+  ],
+};
+---
+
+<section id="skills">
+    <h2>Skills</h2>
+    {
+        //con object entries obtenemos un array a partir del objeto
+        Object.entries(skills).map(([category, items]) => (
+            <div class="skill-category">
+                <h3>{category}</h3>
+                <ul>
+                    {items.map((skill) => (
+                        <li>{skill}</li>
+                    ))}
+                </ul>
+            </div>
+        ))
+    }
+</section>

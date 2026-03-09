@@ -1,0 +1,261 @@
+/* ==================== ESTILOS GENERALES ==================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* ==================== COLUMNA IZQUIERDA ==================== */
+
+.cv-left {
+  width: 30%;
+  background: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+
+.cv-left h1 {
+  font-size: 24px;
+  margin: 15px 0 5px 0;
+}
+
+.cv-left h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* ==================== COLUMNA DERECHA ==================== */
+
+.cv-right {
+  width: 70%;
+  padding: 20px;
+}
+
+.cv-right section {
+  margin-bottom: 25px;
+}
+
+/* ==================== FOTO ==================== */
+
+img {
+  border-radius: 50%;
+}
+
+/* ==================== ABOUT ==================== */
+
+#about h2 {
+  color: #0077cc;
+  border-bottom: 2px solid #0077cc;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+#about p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ==================== SKILLS ==================== */
+
+#skills {
+  margin-top: 20px;
+}
+
+#skills h2 {
+  color: #0077cc;
+  border-bottom: 2px solid #0077cc;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* Categoría */
+
+.skill-category {
+  margin-bottom: 15px;
+}
+
+.skill-category h3 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+/* Contenedor de skills */
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Badge de skill */
+
+.skill-category li {
+  background: #0077cc;
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+/* ==================== CONTACT ==================== */
+
+#contact {
+  margin-top: 20px;
+}
+
+#contact h2 {
+  color: #0077cc;
+  border-bottom: 2px solid #0077cc;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+#contact ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+#contact li {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+#contact a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* ==================== PROJECTS ==================== */
+
+#projects h2 {
+  color: #0077cc;
+  border-bottom: 2px solid #0077cc;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+#projects .projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#projects .project-item {
+  background: #f7f9fc;
+  padding: 15px 20px;
+  border-left: 4px solid #0077cc;
+  border-radius: 5px;
+}
+
+#projects .project-item h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #0077cc;
+}
+
+#projects .project-item p {
+  margin: 3px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Fecha en gris */
+
+#projects .project-item p:first-of-type {
+  color: #888;
+  font-style: italic;
+}
+
+/* Tecnologías */
+
+#projects .project-item p:nth-of-type(3) {
+  font-size: 13px;
+  color: #555;
+}
+
+/* Enlace */
+
+#projects .project-item a {
+  font-size: 14px;
+  color: #0077cc;
+  text-decoration: none;
+}
+
+#projects .project-item a:hover {
+  text-decoration: underline;
+}
+
+p, li, a {
+  word-break: break-word;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+
+  .cv-container {
+    flex-direction: column;
+    margin: 10px auto;
+  }
+
+  .cv-left,
+  .cv-right {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .cv-left {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .cv-right {
+    border-bottom: none;
+  }
+
+  img {
+    width: 120px;
+    height: 120px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .skill-category ul {
+    gap: 5px;
+  }
+
+}

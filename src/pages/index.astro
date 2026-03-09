@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProfilePhoto from "../components/ProfilePhoto.astro";
+import Header from "../components/Header.astro";
+import Skills from "../components/Skills.astro";
+import About from "../components/About.astro";
+import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
+---
+
+<Layout>
+  <div class="cv-container">
+    
+    <!-- Columna izquierda -->
+    <aside class="cv-left">
+      <ProfilePhoto />
+      <Header />
+	  <Contact />
+      <Skills />
+	  
+    </aside>
+    
+    <!-- Columna derecha -->
+    <main class="cv-right">
+      <About />
+      <Projects />
+    </main>
+    
+  </div>
+</Layout>
