@@ -1,14 +1,16 @@
 ---
-const email="gcdruanroldan@gmai.com";
-const linkedin="https://es.linkedin.com/in/roy-duran";
-const github="https://github.com/RoyDuran/RoyDuran";
-const whatsapp = "https://wa.me/34722511717";
+const enlaces={
+  Email:"gcduranroldan@gmail.com",
+  Linkedin:"https://es.linkedin.com/in/roy-duran/",
+  Github:"https://github.com/RoyDuran/",
+  Whatsapp:"https://wa.me/34639615393"
+}
 ---
 <section id="contact">
-  <h2>Contacto</h2>
-  <ul>
-    <li>Email: <a href={`mailto:${email}`}>{email}</a></li>
-    <li>LinkedIn: <a href={linkedin} target="_blank">{linkedin}</a></li>
-    <li>GitHub: <a href={github} target="_blank">{github}</a></li>
-    <li>whatsapp: <a href={whatsapp}>722 51 17 17</a></li>
+  <h3 class="text-center">Contacto</h3>
+  <ul class="overflow-hidden">
+    <li>Email: <a  class="text-blue-500 font-semibold" href={`https://mail.google.com/mail/?view=cm&to=${enlaces.Email}`} target="_blank">{enlaces.Email}</a></li>
+    <li>Linkedin:<a  class="text-blue-500 font-semibold" href={enlaces.Linkedin} target="_blank">{enlaces.Linkedin}</a></li>
+    <li>Github: <a  class="text-blue-500 font-semibold" href={enlaces.Github} target="_blank">{enlaces.Github}</a></li>
+    <li>Whatsapp: <a  class="text-blue-500 font-semibold" href={enlaces.Whatsapp} target="_blank">722 511 717</a></li>
   </ul>

@@ -5,7 +5,6 @@ const skills = {
     "PHP",
     "Node.js",
     "Express",
-    "REST API",
     "MySQL",
   ],
 
@@ -26,15 +25,15 @@ const skills = {
 ---
 
 <section id="skills">
-    <h2>Skills</h2>
+    <h3 class="text-center">Skills</h3>
     {
         //con object entries obtenemos un array a partir del objeto
         Object.entries(skills).map(([category, items]) => (
             <div class="skill-category">
-                <h3>{category}</h3>
+                <h4>{category}</h4>
                 <ul>
                     {items.map((skill) => (
-                        <li>{skill}</li>
+                        <li class="bg-blue-200 border border-blue-500 mb-1  text-center">{skill}</li>
                     ))}
                 </ul>
             </div>

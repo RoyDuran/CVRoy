@@ -1,51 +1,60 @@
 ---
 const projects = [
   {
+    title: "Curriculum en Astro",
+    fecha: "Marzo de 2026",
+    description:
+      "Proyecto de pagina web estática con Astro y con estilos en tailwind, y animaciones. En este proyecto trabajé la estructura de Astro montando todo con componentes, así como el uso de constantes y map para que la pagina sea mas escalable y modular.",
+    tecnologias: "Astro y Tailwind",
+    url: "https://github.com/RoyDuran/CVRoy",
+  },
+  {
     title: "Aplicación de FCT",
-    fecha: "Enero de 2025 - Febrero de 2025",
+    fecha: "Marzo 2025",
     description:
       "App para gestionas las practicas de los alumnos de DAW y DAM con autenticación, funcionalidades CRUD para distintos tipos de usuarios según su nivel de autorización, con una interfaz intuitiva y responsiva.",
     tecnologias: "Axios, Node.js, MySQL2, JavaScript, Nodemon, Express",
-    url: "https://github.com/RoyDuran/fct"
+    url: "https://github.com/RoyDuran/fct",
   },
   {
     title: "Sistema de Gestión de Cursos",
-    fecha: "Marzo 2025 - Abril 2025",
+    fecha: "Febrero 2025",
     description:
       "Programa en PHP que permite a los profesores inscribirse y solicitar cursos. Los administradores pueden crear, eliminar, añadir y baremar cursos según los puntos de cada profesor, activar o desactivar cursos y gestionar la lista de admitidos. Incluye un sistema de login que distingue entre admin y profesor, y permite ver los cursos disponibles y los admitidos en cada curso.",
     tecnologias: "PHP, MySQL, HTML, CSS, JavaScript, Bootstrap",
-    url: "https://github.com/RoyDuran/cursosp"
-  },
-  {
-    title: "Tienda de Jabones Online",
-    fecha: "Mayo 2025",
-    description:
-      "Aplicación web en PHP para una tienda de jabones con carrito de compras, gestión de productos, selección de cantidades y cálculo de total. Interfaz sencilla e intuitiva para facilitar la compra de productos.",
-    tecnologias: "PHP, MySQL, HTML, CSS, JavaScript, Bootstrap",
-    url: "https://github.com/RoyDuran/JabonesScarlatti"
+    url: "https://github.com/RoyDuran/cursosp",
   },
   {
     title: "Envío de Postales por Email",
-    fecha: "Junio 2025",
+    fecha: "Enero 2025",
     description:
       "Aplicación en PHP que permite enviar postales personalizadas por correo electrónico. Los usuarios pueden seleccionar plantillas de postales, escribir un mensaje, adjuntar imágenes y enviar a múltiples destinatarios. Incluye registro de envíos y sistema de notificaciones por correo.",
     tecnologias: "PHP, MySQL, HTML, CSS, JavaScript, PHPMailer",
-    url: "https://github.com/RoyDuran/Aplicaci-n-Enviar-Postales"
+    url: "https://github.com/RoyDuran/Aplicaci-n-Enviar-Postales",
+  },
+
+  {
+    title: "Tienda de Jabones Online",
+    fecha: "Enero 2025",
+    description:
+      "Aplicación web en PHP para una tienda de jabones con carrito de compras, gestión de productos, selección de cantidades y cálculo de total. Interfaz sencilla e intuitiva para facilitar la compra de productos.",
+    tecnologias: "PHP, MySQL, HTML, CSS, JavaScript, Bootstrap",
+    url: "https://github.com/RoyDuran/JabonesScarlatti",
   }
 ];
 ---
 
 <section id="projects">
-  <h2>Proyectos</h2>
+  <h3 class="text-blue-900">Proyectos</h3>
   <div class="projects-list">
     {
       projects.map((project) => (
-        <div class="project-item">
-          <h3>{project.title}</h3>
-          <p>{project.fecha}</p>
+        <div class="project-item mb-5">
+          <h4>{project.title}</h4>
+          <p class="text-gray-500">{project.fecha}</p>
           <p>{project.description}</p>
-          <p>Tecnologias: {project.tecnologias}</p>
-          <a href={project.url}>Ver proyecto</a>
+          <a href={project.url} class="text-white bg-gray-800 rounded p-1 hover:bg-gray-500 py-0" target="_blank">GitHub</a>
+          <p class="text-gray-600">Tecnologias: {project.tecnologias}</p>
         </div>
       ))
     }

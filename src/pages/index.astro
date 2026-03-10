@@ -9,22 +9,33 @@ import Contact from "../components/Contact.astro";
 ---
 
 <Layout>
-  <div class="cv-container">
-    
-    <!-- Columna izquierda -->
-    <aside class="cv-left">
-      <ProfilePhoto />
-      <Header />
-	  <Contact />
-      <Skills />
-	  
-    </aside>
-    
-    <!-- Columna derecha -->
-    <main class="cv-right">
-      <About />
-      <Projects />
-    </main>
-    
+  <div class="min-h-screen bg-gray-500 flex justify-center py-4">
+  <!--flex y justify center para el contenido y min-h para ocupar toda la pantalla min es para que se adapte si hay mas contenido -->  
+    <div 
+      id="documento"
+      class="max-w-5xl bg-white shadow-lg rounded-lg overflow-hidden
+             md:grid md:grid-cols-3"
+    >
+    <!--max-w-5xl es porque me ocupaba todo el ancho de la pantalla y no se veia bien -->
+    <!--con grid para pantallas medianas puedo decirle cuantas columnas quiero y cuanto ocupa cada elemento asi se coloca uno al lado del otro-->
+
+      <!-- Barra lateral -->
+      <aside class="bg-blue-100 p-6 md:col-span-1">
+        <ProfilePhoto />
+        <Header />
+        <br>
+        <Contact />
+        <br>
+        <Skills />
+      </aside>
+
+      <!-- parte principal -->
+      <main class="p-6 md:col-span-2">
+        <About />
+        <Projects />
+      </main>
+
+    </div>
+
   </div>
 </Layout>
