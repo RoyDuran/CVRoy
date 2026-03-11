@@ -5,37 +5,32 @@ import Header from "../components/Header.astro";
 import Skills from "../components/Skills.astro";
 import About from "../components/About.astro";
 import Projects from "../components/Projects.astro";
-import Contact from "../components/Contact.astro";
+import Contact from "../components/Contact.astro";  
 ---
 
 <Layout>
-  <div class="min-h-screen bg-gray-500 flex justify-center py-4">
-  <!--flex y justify center para el contenido y min-h para ocupar toda la pantalla min es para que se adapte si hay mas contenido -->  
-    <div 
-      id="documento"
-      class="max-w-5xl bg-white shadow-lg rounded-lg overflow-hidden
-             md:grid md:grid-cols-3"
-    >
+  <div
+    id="document"
+    class="max-w-5xl bg-white shadow-lg rounded-lg
+             md:grid md:grid-cols-3 my-20"
+  >
     <!--max-w-5xl es porque me ocupaba todo el ancho de la pantalla y no se veia bien -->
     <!--con grid para pantallas medianas puedo decirle cuantas columnas quiero y cuanto ocupa cada elemento asi se coloca uno al lado del otro-->
 
-      <!-- Barra lateral -->
-      <aside class="bg-blue-100 p-6 md:col-span-1">
-        <ProfilePhoto />
-        <Header />
-        <br>
-        <Contact />
-        <br>
-        <Skills />
-      </aside>
+    <!-- Barra lateral -->
+    <aside class="bg-blue-100 p-6 md:col-span-1">
+      <ProfilePhoto />
+      <Header />
+      <Contact />
+      <br />
+      <Skills />
+      <br/>
+    </aside>
 
-      <!-- parte principal -->
-      <main class="p-6 md:col-span-2">
-        <About />
-        <Projects />
-      </main>
-
-    </div>
-
+    <!-- parte principal -->
+    <main class="bg-gray-100 p-6 md:col-span-2">
+      <About />
+      <Projects />
+    </main>
   </div>
 </Layout>

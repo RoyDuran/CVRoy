@@ -1,9 +1,10 @@
 ---
 import "/src/styles/global.css";
 ---
+
 <!doctype html>
 <html lang="en">
-	<head >
+	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -11,8 +12,21 @@ import "/src/styles/global.css";
 		<meta name="generator" content={Astro.generator} />
 		<title>CV Roy</title>
 	</head>
-	<body >
+	<body class="flex justify-center bg-gray-500">
 		<slot />
 	</body>
+	<script is:inline>
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("show");
+				}
+			});
+		});
+
+		document.querySelectorAll(".fade-up").forEach((el) => {
+			observer.observe(el);
+		});
+	</script>
 </html>
 

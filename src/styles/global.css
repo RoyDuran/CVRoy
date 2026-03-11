@@ -13,8 +13,26 @@
   h4 {
     @apply text-xl font-semibold mt-3 mb-2;
   }
-  p {
-    @apply text-base mt-0 mb-1;
+  a{
+    @apply hover:underline;
   }
-
+  #document main h3{
+    @apply font-bold text-blue-800;
+  }
+  #document main h4{
+    @apply mt-0;
+  }
 }
+
+  @layer utilities {
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

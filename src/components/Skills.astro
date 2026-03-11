@@ -29,14 +29,12 @@ const skills = {
     {
         //con object entries obtenemos un array a partir del objeto
         Object.entries(skills).map(([category, items]) => (
-            <div class="skill-category">
-                <h4>{category}</h4>
-                <ul>
-                    {items.map((skill) => (
-                        <li class="bg-blue-200 border border-blue-500 mb-1  text-center">{skill}</li>
-                    ))}
-                </ul>
-            </div>
+            <h4 class="text-center">{category}</h4>
+            <ul>
+                {items.map((skill) => (
+                    <li class="bg-white mb-1  text-center hover:animate-ping fade-up">{skill}</li>
+                ))}
+            </ul>
         ))
     }
 </section>

@@ -45,16 +45,17 @@ const projects = [
 ---
 
 <section id="projects">
-  <h3 class="text-blue-900">Proyectos</h3>
-  <div class="projects-list">
+  <h3 >Proyectos</h3>
     {
       projects.map((project) => (
-        <div class="project-item mb-5">
-          <h4>{project.title}</h4>
-          <p class="text-gray-500">{project.fecha}</p>
-          <p>{project.description}</p>
-          <a href={project.url} class="text-white bg-gray-800 rounded p-1 hover:bg-gray-500 py-0" target="_blank">GitHub</a>
-          <p class="text-gray-600">Tecnologias: {project.tecnologias}</p>
+        <div class="bg-white p-2 rounded-lg shadow-lg
+            hover:scale-110
+            transition-all
+            duration-300 mb-2 fade-up">
+        <h4><a href={project.url} target="_blank">{project.title}</a></h4>
+        <p class="text-gray-500">{project.fecha}</p>
+        <p>{project.description}</p>
+        <p class="text-gray-600">Tecnologias: {project.tecnologias}</p>
         </div>
       ))
     }
